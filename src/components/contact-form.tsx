@@ -68,7 +68,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="section-shell-strong rounded-[2.2rem] p-6 sm:p-8"
+      className="section-shell-strong rounded-[1.8rem] p-5 sm:rounded-[2.2rem] sm:p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Name" name="name" placeholder="Your full name" required />
@@ -117,12 +117,12 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded-full bg-[var(--surface-strong)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70"
+          className="w-full rounded-full bg-[var(--surface-strong)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 hover:-translate-y-0.5 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
         >
           {isSubmitting ? "Sending..." : "Send Inquiry"}
         </button>
         <p
-          className={`text-sm ${
+          className={`text-sm leading-6 sm:max-w-xs ${
             status.type === "error"
               ? "text-red-600"
               : status.type === "success"
@@ -165,7 +165,7 @@ function Field({
         name={name}
         placeholder={placeholder}
         required={required}
-        className="field-shell w-full rounded-[1.4rem] px-4 py-3 text-sm text-slate-700 outline-none ring-0 placeholder:text-slate-400 focus:border-[var(--accent-strong)]"
+        className="field-shell w-full rounded-[1.1rem] px-4 py-3 text-sm text-slate-700 outline-none ring-0 placeholder:text-slate-400 focus:border-[var(--accent-strong)] sm:rounded-[1.4rem]"
       />
     </label>
   );

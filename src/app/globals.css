@@ -35,6 +35,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 a,
@@ -146,4 +147,18 @@ textarea {
   border: 1px solid rgba(15, 23, 42, 0.1);
   background:
     linear-gradient(180deg, rgba(248, 246, 241, 0.94), rgba(248, 246, 241, 0.84));
+}
+
+@media (max-width: 767px) {
+  .grid-pattern {
+    background-size: 22px 22px;
+  }
+
+  .draft-lines::after {
+    inset: 0.8rem;
+  }
+
+  .section-title {
+    line-height: 0.98;
+  }
 }
